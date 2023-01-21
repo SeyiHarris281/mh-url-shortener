@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/public/style.css">
+</head>
+<body>
+  <header>
+    <h1>URL Shortener Microservice</h1>
+  </header>
+  <main>
+    <section class="app container">
+      <form action="/api/shorturl" method="post">
+        <fieldset>
+          <legend>URL Shortener</legend>
+          <label>URL:
+            <input type="text" name="url" placeholder="Enter URL">
+          </label>
+          <input type="submit" value="POST URL">
+        </fieldset>
+      </form>
+    </section>
+    <section class="instructions container">
+      <div class="instructions-container">
+        <h3>Instructions:</h3>
+        <ul>
+          <li>Enter [original_url] in URL entry field.</li><br>
+          <li>Click <b>POST URL</b>.</li><br>
+          <li>Receive JSON response with format as follows</li>
+          <code>{ original_url: "https://www.example.com", short_url: wfu3z }</code><br><br>
+          <li>Visit following URL to be redirected to [original_url]</li>
+          <code>[this_project_url]/api/shorturl/[short_url]</code>
+        </ul>
+      </div>
+    </section>
+    
+  </main>
+  <footer>Created by: Seyi Harris</footer>
+</body>
+</html>
